@@ -1,0 +1,13 @@
+{
+  "Demo": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--with",
+      "fastmcp",
+      "fastmcp",
+      "run",
+      "C:\\Users\\mauro\\PycharmProjects\\a2a_agent\\mcp_server_prova.py"
+    ]
+  }
+}
