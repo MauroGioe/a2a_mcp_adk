@@ -9,12 +9,13 @@ from google.adk.artifacts import InMemoryArtifactService
 from google.adk.sessions import InMemorySessionService
 from google.adk.tools.mcp_tool import McpToolset
 from mcp import StdioServerParameters
-from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
+from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams,StreamableHTTPServerParams
 from google.adk.agents import Agent
 load_dotenv(find_dotenv())
 
 #quanto valgono 10 euro in yen?
 
+#With http you have to first run the server
 async def get_agent_async():
   """Creates an ADK Agent equipped with tools from the MCP Server."""
   print("Attempting to connect to MCP Filesystem server...")
@@ -25,11 +26,7 @@ async def get_agent_async():
                   args= ["mcp_server.py"])
   )),
       McpToolset(
-          connection_params=StdioConnectionParams(server_params=StdioServerParameters(
-              command="python.exe",
-              # Make sure to update to the full absolute path to your math_server.py file
-              args=["math_server.py"])
-          ))
+          connection_params=StreamableHTTPServerParams(url='http://localhost:7002/mcp'))
   ]
   print("MCP Toolset created successfully.")
   root_agent = Agent(

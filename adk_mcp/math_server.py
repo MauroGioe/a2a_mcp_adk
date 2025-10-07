@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 
 # Create an MCP server
-mcp = FastMCP("math", port=8002)
+mcp = FastMCP("math", host="127.0.0.1", port=7002)
 
 
 
@@ -20,7 +20,7 @@ def add(a: int, b: int) -> int:
 
 def main():
     # Initialize and run the server
-    mcp.run(transport='stdio')
+    mcp.run(transport='streamable-http')
 #fastmcp install mcp-json mcp_server_prova.py
 if __name__ == "__main__":
     main()
