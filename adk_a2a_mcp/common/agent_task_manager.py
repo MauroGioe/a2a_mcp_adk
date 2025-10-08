@@ -1,9 +1,9 @@
 import traceback
 from typing import Any, AsyncGenerator, Union
 
-from adk_a2a_mcp.common.server import utils
-from adk_a2a_mcp.common.server.task_manager import InMemoryTaskManager
-from adk_a2a_mcp.common.types import (
+from a2a_mcp_adk.adk_a2a_mcp.common.server import utils
+from a2a_mcp_adk.adk_a2a_mcp.common.server.task_manager import InMemoryTaskManager
+from a2a_mcp_adk.adk_a2a_mcp.common.types import (
     SendTaskRequest,
     TaskSendParams,
     Message,

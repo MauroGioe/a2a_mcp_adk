@@ -1,7 +1,7 @@
 import re
 
 import httpx
-from adk_a2a_mcp.common.types import (
+from a2a_mcp_adk.adk_a2a_mcp.common.types import (
     AgentCard,
     A2AClientJSONError,
 )
