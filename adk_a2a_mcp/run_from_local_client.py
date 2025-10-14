@@ -59,5 +59,6 @@ async def main():
 #call the math tool and execute 3*3
 #convert 10 euro in yen using exchange tool
 #what's the exchange rate between euro and usd? use the exchange tool
+#contact the math agent and ask for a list of mcp tools
 if __name__ == "__main__":
     asyncio.run(main())

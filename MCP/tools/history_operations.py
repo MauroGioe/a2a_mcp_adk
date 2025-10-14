@@ -4,8 +4,8 @@ from typing import Dict, Any, Optional
 from fastmcp import Context
 import logging
 
-from MCP.models.csv_session import get_session_manager
-from MCP.models.data_models import OperationResult
+from models.csv_session import get_session_manager
+from models.data_models import OperationResult
 
 logger = logging.getLogger(__name__)
 

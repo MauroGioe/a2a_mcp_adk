@@ -5,8 +5,8 @@ from fastmcp import Context
 import pandas as pd
 import logging
 
-from MCP.models.csv_session import get_session_manager
-from MCP.models.data_models import OperationType
+from models.csv_session import get_session_manager
+from models.data_models import OperationType
 
 logger = logging.getLogger(__name__)
 
