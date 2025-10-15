@@ -1,7 +1,7 @@
 import httpx
 from httpx_sse import connect_sse
 from typing import Any, AsyncIterable
-from adk_a2a_mcp.common.types import (
+from a2a_mcp_adk.adk_a2a_mcp.common.types import (
     AgentCard,
     GetTaskRequest,
     SendTaskRequest,

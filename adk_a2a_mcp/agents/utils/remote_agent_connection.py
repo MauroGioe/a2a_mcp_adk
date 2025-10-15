@@ -1,8 +1,8 @@
 import uuid
 from typing import Callable
 
-from adk_a2a_mcp.common.client import A2AClient
-from adk_a2a_mcp.common.types import (
+from a2a_mcp_adk.adk_a2a_mcp.common.client import A2AClient
+from a2a_mcp_adk.adk_a2a_mcp.common.types import (
     AgentCard,
     Task,
     TaskSendParams,

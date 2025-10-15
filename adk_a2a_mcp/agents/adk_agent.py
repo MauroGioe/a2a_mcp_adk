@@ -14,9 +14,9 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.tools import ToolContext
 from google.genai import types
 
-from adk_a2a_mcp.common.client import A2ACardResolver
-from adk_a2a_mcp.common.types import AgentCard, TaskSendParams, Message, TextPart, TaskState, Task, Part, DataPart
-from adk_a2a_mcp.agents.utils.remote_agent_connection import TaskUpdateCallback, RemoteAgentConnections
+from a2a_mcp_adk.adk_a2a_mcp.common.client import A2ACardResolver
+from a2a_mcp_adk.adk_a2a_mcp.common.types import AgentCard, TaskSendParams, Message, TextPart, TaskState, Task, Part, DataPart
+from a2a_mcp_adk.adk_a2a_mcp.agents.utils.remote_agent_connection import TaskUpdateCallback, RemoteAgentConnections
 
 load_dotenv(find_dotenv())
 
