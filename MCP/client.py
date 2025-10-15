@@ -7,7 +7,7 @@ from mcp.client.stdio import stdio_client
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 
-model = ChatOllama(model="llama3.2:latest",temperature=0)
+model = ChatOllama(model="qwen3:4b",temperature=0)
 #server_params = StdioServerParameters(command="python", args=["mcp_server_prova.py"])
 
 client = MultiServerMCPClient(
@@ -47,8 +47,8 @@ async def run_agent():
         if prompt in ["quit","exit"]:
             break
         agent_response = await agent.ainvoke({"messages":prompt_context} )
-        agent_response = agent_response["messages"][-1].content
-        print(agent_response)
+        agent_response_printed = agent_response["messages"][-1].content
+        print(agent_response_printed)
         context += f"Context:\nUser:{prompt}\nAI: {agent_response}"
         #print(context)
 
@@ -73,6 +73,8 @@ async def run_agent():
 #                 print(agent_response)
 #                 context += f"Context:\nUser:{prompt}\nAI: {agent_response}"
 #                 #print(context)
+
+#load the csv "titanic.csv" and show the first five rows
 if __name__ ==  "__main__":
     asyncio.run(run_agent())
 
